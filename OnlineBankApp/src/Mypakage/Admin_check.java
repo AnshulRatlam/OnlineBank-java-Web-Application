@@ -50,7 +50,7 @@ public class Admin_check extends HttpServlet {
 		   //Session code here
 			HttpSession session=request.getSession();
 			session.setAttribute("uid",u);
-			response.sendRedirect("Admin_panel.jsp");
+			response.sendRedirect("admin/Admin_panel.jsp");
 			
 		}
 		else {

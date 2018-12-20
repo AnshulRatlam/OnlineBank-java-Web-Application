@@ -10,6 +10,18 @@
 <body>
 <%@include file="header.jsp" %>
 
+
+      <% 
+	  	String uid=(String)session.getAttribute("uid");
+     if(uid==null)
+      {
+      
+    	 response.sendRedirect("admin/index.jsp");
+      
+     }
+	   %>
+	<center><font color=red><h1>Welcome,<%=uid%></h1></font><hr/>
+	</center>
 <table class="table table-hover">
  <tr><th>UID</th><th>Name</th><th>Email</th><th>Address</th><th>Mob</th><th>Balance</th></tr>
  <% 

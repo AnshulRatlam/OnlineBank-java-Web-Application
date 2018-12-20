@@ -72,14 +72,14 @@ public class Cust_insert extends HttpServlet {
 		
 		if(x==1)
 	         {
-	        	 RequestDispatcher rd=request.getRequestDispatcher("create_account.jsp");
+	        	 RequestDispatcher rd=request.getRequestDispatcher("admin/create_account.jsp");
                 request.setAttribute("msg", "Data Inserted Successfully...");
                rd.forward(request, response);
 	         
 	         }
 	         else
 	         {
-	        	 RequestDispatcher rd=request.getRequestDispatcher("create_account.jsp");
+	        	 RequestDispatcher rd=request.getRequestDispatcher("admin/create_account.jsp");
              request.setAttribute("msg", "Data Not Inserted Successfully...");
             rd.forward(request, response);
 	         }

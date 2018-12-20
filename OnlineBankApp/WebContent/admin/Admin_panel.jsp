@@ -8,7 +8,19 @@
 <body>
 <%@include file="header.jsp" %>
 <div class="container">
-  <h3>Wellcome Admin Panel</h3>
+ <% 
+	  	String uid=(String)session.getAttribute("uid");
+ if(uid==null)
+ {
+ 
+	 response.sendRedirect("index.jsp");
+ 
+}
+	   %>
+	<center><font color=red><h1>Welcome,<%=uid%></h1></font><hr/>
+	</center>
+ 
+  <h3>Admin Panel</h3>
   <p>Bank Policy and Admin Panel Detail</p>
 </div>
 

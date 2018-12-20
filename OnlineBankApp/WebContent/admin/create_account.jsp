@@ -11,6 +11,19 @@
 <body>
 <%@include file="header.jsp" %>
 <% 
+	  	String uid=(String)session.getAttribute("uid");
+if(uid==null)
+{
+
+	 response.sendRedirect("admin/index.jsp");
+
+}
+	   %>
+	<center><font color=red><h1>Welcome,<%=uid%></h1></font><hr/>
+	</center>
+
+
+<% 
 String m = (String)request.getAttribute("msg") ;
 if (m!=null)
 {
@@ -30,7 +43,7 @@ if (m!=null)
 			<div class="row main">
 				<div class="main-login main-center">
 				<h5>Sign up For Create Account</h5>
-					<form method="post" action="./Cust_insert">
+					<form method="post" action="../Cust_insert">
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Your Name</label>
